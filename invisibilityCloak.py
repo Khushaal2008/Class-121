@@ -62,7 +62,8 @@ while (cap.isOpened()):
     output_file.write(final_output)
     #Displaying the output to the user
     cv2.imshow("magic", final_output)
-    cv2.waitKey(1)
+    if cv2.waitKey(1) and 0xFF == ord('q'):
+        break 
 
 
 cap.release()
